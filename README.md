@@ -10,13 +10,13 @@
 хвороба, панкреатит) та інших станів, де важливе правильне харчування.
 
 Структура:
-/css – файли стилів
-/images – зображення та медіа
-/js – JavaScript файли
-index.html – головна сторінка
-diets.html – каталог дієт
-recipes.html – рецепти
-communities.html – спільноти
-profile.html – профіль
-about.html – інформація про платформу
-contacts.html – контакти
+/css – файли стилів  
+/images – зображення та медіа  
+/js – JavaScript файли  
+index.html – головна сторінка  
+diets.html – каталог дієт  
+recipes.html – рецепти  
+communities.html – спільноти  
+profile.html – профіль  
+about.html – інформація про платформу  
+contacts.html – контакти  
