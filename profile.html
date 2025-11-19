@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>YourHealth+ – Профіль</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="logo">
+        <a href="index.html" title="Повернутись на головну">
+          <img src="images/icon.png" alt="Логотип YourHealth+" class="site-logo">
+          <span class="site-name">Your Health+</span>
+        </a>
+      </div>
+    </div>
+    <h1>Профіль користувача</h1>
+  </header>
+
+  <aside>
+    <nav aria-label="Бічна навігація">
+      <ul>
+        <li><a href="profile.html">Профіль</a></li>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="diets.html">Дієти</a></li>
+        <li><a href="recipes.html">Рецепти</a></li>
+        <li><a href="communities.html">Спільноти</a></li>
+        <li><a href="about.html">Про платформу</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <section aria-labelledby="profile-header">
+      <h2 id="profile-header">Мій профіль</h2>
+      <div class="profile-hero">
+        <button type="button">Налаштування</button>
+        <img src="images/user-avatar.jpg" alt="Фото користувача" width="120" height="120">
+        <h3>Ім'я'</h3>
+      </div>
+    </section>
+
+    <nav aria-label="Розділи профілю">
+      <ul>
+        <li><a href="#fav-recipes">Рецепти</a></li>
+        <li><a href="#fav-diets">Дієти</a></li>
+        <li><a href="#fav-communities">Спільноти</a></li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="imt-title">
+      <h2 id="imt-title">ІМТ</h2>
+      <p>Тут буде візуальна шкала:</p>
+      <div class="imt-scale">
+        <p>Недостатня вага | Норма | Надмірна вага | Ожиріння</p>
+        <p>ваше значення</p>
+      </div>
+    </section>
+
+    <section id="fav-recipes" aria-labelledby="fav-recipes-title">
+      <h2 id="fav-recipes-title">Обрані рецепти</h2>
+      <!-- приклад -->
+      <article>
+        <h3>Курячий суп без лактози</h3>
+        <p><a href="recipes.html">Перейти до рецепта</a></p>
+      </article>
+    </section>
+
+    <section id="fav-diets" aria-labelledby="fav-diets-title">
+      <h2 id="fav-diets-title">Обрані дієти</h2>
+      <article>
+        <h3>Дієта при гастриті</h3>
+        <p><a href="diets.html">Переглянути</a></p>
+      </article>
+    </section>
+
+    <section id="fav-communities" aria-labelledby="fav-communities-title">
+      <h2 id="fav-communities-title">Обрані спільноти</h2>
+      <article>
+        <h3>Спільнота: Безглютенове харчування</h3>
+        <p><a href="communities.html">Перейти</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 YourHealth+</p>
+  </footer>
+</body>
+</html>
