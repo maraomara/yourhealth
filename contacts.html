@@ -2,73 +2,112 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>YourHealth+ – Контакти</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти - YourHealth+</title>
+
+  <!-- Шрифти -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cuprum:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Стилі -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
+
+<body class="page page-contacts">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+<div class="page-layout">
+
+  <header class="site-header">
     <div class="topbar">
+      <label for="nav-toggle" class="burger" aria-label="Відкрити або закрити меню">
+        <span></span><span></span><span></span>
+      </label>
+
       <div class="logo">
         <a href="index.html" title="Повернутись на головну">
-          <img src="images/icon.png" alt="Логотип YourHealth+" class="site-logo">
-          <span class="site-name">Your Health+</span>
+          <span class="site-name">YourHealth+</span>
         </a>
       </div>
-    </div>
 
-    <h1>Контакти</h1>
+      <div class="lang-switch">
+        <a href="#" class="lang-link lang-link--active" data-lang="ua">UA</a> |
+        <a href="#" class="lang-link" data-lang="en">EN</a>
+      </div>
+
+      <button type="button" class="btn btn-outline" id="theme-toggle">Змінити тему</button>
+
+      <form action="#" method="get" class="search-form" role="search">
+        <label for="search-contacts" class="visually-hidden">Пошук по сайту</label>
+        <input type="search" id="search-contacts" name="q" placeholder="Пошук">
+        <button type="submit" class="btn btn-primary">Пошук</button>
+      </form>
+    </div>
   </header>
 
-  <aside>
+  <aside class="sidebar">
+    <label for="nav-toggle" class="sidebar-close" aria-label="Закрити меню">&times;</label>
+
+    <div class="profile-box">
+      <div class="sidebar-avatar-wrapper">
+        <img src="images/example_of_avatar.png" alt="Ваш аватар" class="sidebar-avatar">
+      </div>
+      <p class="profile-name">Ваш профіль</p>
+    </div>
+
     <nav aria-label="Бічна навігація">
-      <ul>
-        <li><a href="profile.html">Профіль</a></li>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="diets.html">Дієти</a></li>
-        <li><a href="recipes.html">Рецепти</a></li>
-        <li><a href="communities.html">Спільноти</a></li>
-        <li><a href="about.html">Про платформу</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
+      <ul class="sidebar-nav">
+        <li><a class="sidebar-btn" href="profile.html">Профіль</a></li>
+        <li><a class="sidebar-btn" href="index.html">Головна</a></li>
+        <li><a class="sidebar-btn" href="diets.html">Дієти</a></li>
+        <li><a class="sidebar-btn" href="recipes.html">Рецепти</a></li>
+        <li><a class="sidebar-btn" href="communities.html">Спільноти</a></li>
+        <li><a class="sidebar-btn" href="about.html">Про платформу</a></li>
+        <li><a class="sidebar-btn sidebar-btn--active" href="contacts.html">Контакти</a></li>
       </ul>
     </nav>
   </aside>
 
-  <main>
-    <section aria-labelledby="contact-info">
-      <h2 id="contact-info">Як з нами зв’язатися</h2>
-      <p>Ми відкриті до співпраці, пропозицій та зворотного зв’язку. Ви можете зв’язатися з нами будь-яким зручним способом:</p>
+  <label for="nav-toggle" class="sidebar-overlay"></label>
 
-      <ul>
-        <li><strong>Електронна пошта:</strong> <a href="mailto:support@yourhealth.ua">support@yourhealth.ua</a></li>
-        <li><strong>Телефон:</strong> <a href="tel:+380441234567">+38 (044) 123-45-67</a></li>
-        <li><strong>Адреса:</strong> м. Київ, вул. Здоров’я, 10</li>
-      </ul>
-    </section>
+  <main class="site-main">
+    <h1 class="page-title">Контакти</h1>
 
-    <section aria-labelledby="feedback-form">
-      <h2 id="feedback-form">Форма зворотного зв’язку</h2>
-      <form action="#" method="post">
-        <label for="name">Ваше ім’я:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+    <section class="home-section">
+      <h2>Зв’яжіться з нами</h2>
+      <p>Заповніть форму, і ми відповімо вам найближчим часом.</p>
 
-        <label for="email">Ваш email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+      <form action="#" method="post" class="contact-form">
+        <label for="name">Ваше ім’я</label>
+        <input type="text" id="name" name="name" required>
 
-        <label for="message">Повідомлення:</label><br>
-        <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
+        <label for="email">Ваш email</label>
+        <input type="email" id="email" name="email" required>
 
-        <button type="submit">Надіслати</button>
+        <label for="message">Повідомлення</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn btn-primary">Надіслати</button>
       </form>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 YourHealth+. Всі права захищено.</p>
-    <nav>
-      <a href="about.html">Про платформу</a> |
-      <a href="contacts.html">Контакти</a>
-    </nav>
-  </footer>
+  <!-- Футер -->
+<footer class="site-footer">
+  <p>
+    &copy; <span id="current-year"></span> YourHealth+. Всі права захищено.
+    <span style="margin-left:10px; opacity:.85;">
+      Сьогодні: <span id="current-date"></span>
+    </span>
+  </p>
+
+  <nav aria-label="Нижня навігація">
+    <a href="about.html">Про проєкт</a> |
+    <a href="contacts.html">Контакти</a>
+  </nav>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
