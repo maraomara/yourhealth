@@ -2,67 +2,158 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Про платформу YourHealth+</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>YourHealth+ – Про платформу</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <header>
-    <div class="topbar">
-      <div class="logo">
-        <a href="index.html" title="Повернутись на головну">
-          <img src="images/icon.png" alt="Логотип YourHealth+" class="site-logo">
-          <span class="site-name">Your Health+</span>
-        </a>
-      </div>
-    </div>
 
-    <h1>Про платформу YourHealth+</h1>
-    <aside>
-      <nav aria-label="Бічна навігація">
-        <ul>
-          <li><a href="profile.html">Профіль</a></li>
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="diets.html">Дієти</a></li>
-          <li><a href="recipes.html">Рецепти</a></li>
-          <li><a href="communities.html">Спільноти</a></li>
-          <li><a href="about.html">Про платформу</a></li>
-          <li><a href="contacts.html">Контакти</a></li>
+  <!-- Шрифти -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cuprum:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Стилі -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page page-about">
+<!-- Чекбокс для бургера -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+  <div class="page-layout">
+
+      <!-- Хедер -->
+    <header class="site-header">
+      <div class="topbar">
+
+        <label for="nav-toggle" class="burger" aria-label="Відкрити меню">
+          <span></span><span></span><span></span>
+        </label>
+
+        <div class="logo">
+          <a href="index.html">
+            <span class="site-name">YourHealth+</span>
+          </a>
+        </div>
+    <!-- Мови -->
+        <div class="lang-switch">
+          <a href="#" class="lang-link lang-link--active">UA</a> |
+          <a href="#" class="lang-link">EN</a>
+        </div>
+
+        <button type="button" class="btn btn-outline" id="theme-toggle">
+          Змінити тему
+        </button>
+
+        <form action="#" class="search-form" role="search">
+          <input type="search" placeholder="Пошук">
+          <button type="submit" class="btn btn-primary">Пошук</button>
+        </form>
+      </div>
+    </header>
+
+<!-- Сайдбар -->
+    <aside class="sidebar">
+      <label for="nav-toggle" class="sidebar-close">&times;</label>
+
+      <div class="profile-box">
+        <img src="images/example_of_avatar.png" alt="Аватар" class="sidebar-avatar">
+        <p class="profile-name">Ваш профіль</p>
+      </div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a class="sidebar-btn" href="profile.html">Профіль</a></li>
+          <li><a class="sidebar-btn" href="index.html">Головна</a></li>
+          <li><a class="sidebar-btn" href="diets.html">Дієти</a></li>
+          <li><a class="sidebar-btn" href="recipes.html">Рецепти</a></li>
+          <li><a class="sidebar-btn" href="communities.html">Спільноти</a></li>
+          <li><a class="sidebar-btn sidebar-btn--active" href="about.html">Про платформу</a></li>
+          <li><a class="sidebar-btn" href="contacts.html">Контакти</a></li>
         </ul>
       </nav>
     </aside>
-  </header>
 
-  <main>
-    <section aria-labelledby="mission">
-      <h2 id="mission">Місія</h2>
-      <p>
-        YourHealth+ створено для підтримки людей із харчовими обмеженнями, алергіями та захворюваннями травної системи.
-        Платформа надає доступ до перевірених дієт, зручних інструментів відбору та тематичних спільнот.
-      </p>
-    </section>
+    <label for="nav-toggle" class="sidebar-overlay"></label>
 
-    <section aria-labelledby="goals">
-      <h2 id="goals">Стратегічні цілі</h2>
-      <ol>
-        <li>Зібрати інтерактивну бібліотеку дієт і харчових планів.</li>
-        <li>Забезпечити персоналізований підбір меню під стан користувача.</li>
-        <li>Створити безпечний простір для обміну досвідом між користувачами.</li>
-      </ol>
-    </section>
+    <main class="site-main">
 
-    <section aria-labelledby="audience">
-      <h2 id="audience">Цільова аудиторія</h2>
-      <ul>
-        <li>Люди з алергіями та непереносимостями (глютен, лактоза тощо);</li>
-        <li>Користувачі із захворюваннями травної системи (гастрит, панкреатит, виразкова хвороба);</li>
-        <li>Батьки дітей із особливими харчовими потребами.</li>
-      </ul>
-    </section>
-  </main>
+      <h1 class="page-title">ПРО ПЛАТФОРМУ</h1>
 
-  <footer>
-    <p>&copy; 2025 YourHealth+. Всі права захищено.</p>
+      <section class="home-section">
+        <h2>Місія</h2>
+        <p>
+          YourHealth+ — це інформаційна платформа, створена для людей, які мають
+          харчові обмеження, алергії або захворювання травної системи.
+        </p>
+        <p>
+          Наша мета — допомогти користувачам орієнтуватися у виборі дієт та рецептів,
+          роблячи процес харчування безпечним, простим і зрозумілим.
+        </p>
+      </section>
+
+      <section class="home-section">
+        <h2>Основні цілі</h2>
+        <ul>
+          <li>Створити каталог дієт із детальним описом.</li>
+          <li>Надати зручний доступ до рецептів відповідно до дієти.</li>
+          <li>Допомогти уникати продуктів, що можуть шкодити здоровʼю.</li>
+          <li>Розвивати спільноту користувачів для обміну досвідом.</li>
+        </ul>
+      </section>
+
+      <section class="home-section">
+        <h2>Для кого створено платформу</h2>
+        <p>Платформа буде корисною для:</p>
+        <ul>
+          <li>людей з алергіями (глютен, лактоза, горіхи тощо);</li>
+          <li>користувачів із захворюваннями ШКТ;</li>
+          <li>тих, хто дотримується лікувальних дієт;</li>
+          <li>батьків дітей з особливими харчовими потребами.</li>
+        </ul>
+      </section>
+
+      <section class="home-section">
+        <h2>Технології</h2>
+        <p>
+          Проєкт реалізований із використанням HTML5, CSS3 та JavaScript.
+          Інтерактивність сайту забезпечується за рахунок роботи з DOM,
+          обробки подій, валідації форм та використання LocalStorage.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-accordion-toggle
+          data-target="#about-more"
+          aria-expanded="false">
+          Показати більше
+        </button>
+
+        <div id="about-more" hidden>
+          <p>
+            У майбутньому платформа може бути розширена за рахунок персональних
+            рекомендацій, збереження обраних дієт і рецептів, а також інтеграції
+            з серверною частиною для роботи з базою даних.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Футер -->
+  <footer class="site-footer">
+    <p>
+      &copy; <span id="current-year"></span> YourHealth+. Всі права захищено.
+      <span style="margin-left:10px; opacity:.85;">
+        Сьогодні: <span id="current-date"></span>
+      </span>
+    </p>
+
+    <nav aria-label="Нижня навігація">
+      <a href="about.html">Про проєкт</a> |
+      <a href="contacts.html">Контакти</a>
+    </nav>
   </footer>
-</body>
-</html>
+
+  <script src="js/main.js"></script>
+  </body>
+  </html>
