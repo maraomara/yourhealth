@@ -3,78 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <title>YourHealth+ – Спільноти</title>
-  <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Шрифти -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cuprum:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Стилі -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
+
+
+
+
+
+
+<body class="page page-communities">
+
+<!-- Чекбокс для бургера -->
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+<div class="page-layout">
+  <!-- Хедер -->
+  <header class="site-header">
     <div class="topbar">
+      <!-- Бургер -->
+      <label for="nav-toggle" class="burger" aria-label="Відкрити або закрити меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <!-- Логотип -->
       <div class="logo">
         <a href="index.html" title="Повернутись на головну">
-          <img src="images/icon.png" alt="Логотип YourHealth+" class="site-logo">
-          <span class="site-name">Your Health+</span>
+          <span class="site-name">YourHealth+</span>
         </a>
       </div>
+      <!-- Мови -->
+      <div class="lang-switch">
+        <a href="#" class="lang-link lang-link--active" data-lang="ua">UA</a> |
+        <a href="#" class="lang-link" data-lang="en">EN</a>
+      </div>
+      <button type="button" class="btn btn-outline" id="theme-toggle">
+          Змінити тему
+      </button>
+
+      <!-- Пошук -->
+      <form action="#" method="get" class="search-form" role="search">
+        <label for="search-communities" class="visually-hidden">Пошук по сайту</label>
+        <input type="search" id="search-communities" name="q" placeholder="Пошук">
+        <button type="submit" class="btn btn-primary">Пошук</button>
+      </form>
+    </div>
+  </header>
+<!-- Сайдбар -->
+  <aside class="sidebar">
+    <label for="nav-toggle" class="sidebar-close" aria-label="Закрити меню">&times;</label>
+    <div class="profile-box">
+      <div class="sidebar-avatar-wrapper">
+        <img src="images/example_of_avatar.png" alt="Ваш аватар" class="sidebar-avatar">
+      </div>
+      <p class="profile-name">Ваш профіль</p>
     </div>
 
-    <h1>Спільноти</h1>
-  </header>
-
-  <aside>
     <nav aria-label="Бічна навігація">
-      <ul>
-        <li><a href="profile.html">Профіль</a></li>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="diets.html">Дієти</a></li>
-        <li><a href="recipes.html">Рецепти</a></li>
-        <li><a href="communities.html">Спільноти</a></li>
-        <li><a href="about.html">Про платформу</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
+      <ul class="sidebar-nav">
+        <li><a class="sidebar-btn" href="profile.html">Профіль</a></li>
+        <li><a class="sidebar-btn" href="index.html">Головна</a></li>
+        <li><a class="sidebar-btn" href="diets.html">Дієти</a></li>
+        <li><a class="sidebar-btn" href="recipes.html">Рецепти</a></li>
+        <li><a class="sidebar-btn sidebar-btn--active" href="communities.html">Спільноти</a></li>
+        <li><a class="sidebar-btn" href="about.html">Про платформу</a></li>
+        <li><a class="sidebar-btn" href="contacts.html">Контакти</a></li>
       </ul>
     </nav>
   </aside>
 
-  <main>
-    <section aria-labelledby="communities-title">
-      <div class="top-controls">
-        <h2 id="communities-title">Список спільнот</h2>
-        <button type="button" id="community-filters">Фільтри</button>
+  <label for="nav-toggle" class="sidebar-overlay"></label>
+
+  <main class="site-main">
+    <h1 class="page-title">СПІЛЬНОТИ</h1>
+
+    <section class="home-section communities-section">
+      <div class="section-head">
+        <div class="section-title-block">
+          <span class="section-title-link">Каталог спільнот</span>
+        </div>
+        <button type="button" class="btn btn-outline">Фільтри</button>
       </div>
 
-      <div class="community-grid" id="community-grid">
+      <div class="community-catalog-grid" id="community-grid">
 
-        <article class="community-card" data-community-id="1">
-          <img src="images/example_of_picture.png" alt="Спільнота (example)" width="220" height="160">
-          <h3 class="community-name">Назва спільноти</h3>
+        <article class="card community-card">
+          <a href="#" class="card-link">
+            <img src="images/example_of_picture.png" alt="Спільнота 1" class="card-image">
+            <h3 class="card-title">Назва спільноти 1</h3>
+          </a>
         </article>
-
-        <article class="community-card" data-community-id="2">
-          <img src="images/example_of_picture.png" alt="Спільнота (example)" width="220" height="160">
-          <h3 class="community-name">Назва спільноти</h3>
+        <article class="card community-card">
+          <a href="#" class="card-link">
+            <img src="images/example_of_picture.png" alt="Спільнота 2" class="card-image">
+            <h3 class="card-title">Назва спільноти 2</h3>
+          </a>
         </article>
-
-        <article class="community-card" data-community-id="3">
-          <img src="images/example_of_picture.png" alt="Спільнота (example)" width="220" height="160">
-          <h3 class="community-name">Назва спільноти</h3>
+        <article class="card community-card">
+          <a href="#" class="card-link">
+            <img src="images/example_of_picture.png" alt="Спільнота 3" class="card-image">
+            <h3 class="card-title">Назва спільноти 3</h3>
+          </a>
         </article>
-
-        <article class="community-card" data-community-id="4">
-          <img src="images/example_of_picture.png" alt="Спільнота (example)" width="220" height="160">
-          <h3 class="community-name">Назва спільноти</h3>
+        <article class="card community-card">
+          <a href="#" class="card-link">
+            <img src="images/example_of_picture.png" alt="Спільнота 4" class="card-image">
+            <h3 class="card-title">Назва спільноти 4</h3>
+          </a>
         </article>
-
-        <article class="community-card" data-community-id="5">
-          <img src="images/example_of_picture.png" alt="Спільнота (example)" width="220" height="160">
-          <h3 class="community-name">Назва спільноти</h3>
+        <article class="card community-card">
+          <a href="#" class="card-link">
+            <img src="images/example_of_picture.png" alt="Спільнота 5" class="card-image">
+            <h3 class="card-title">Назва спільноти 5</h3>
+          </a>
+        </article>
+        <article class="card community-card">
+          <a href="#" class="card-link">
+            <img src="images/example_of_picture.png" alt="Спільнота 6" class="card-image">
+            <h3 class="card-title">Назва спільноти 6</h3>
+          </a>
         </article>
 
       </div>
-
     </section>
   </main>
+  <!-- Футер -->
+<footer class="site-footer">
+  <p>
+    &copy; <span id="current-year"></span> YourHealth+. Всі права захищено.
+    <span style="margin-left:10px; opacity:.85;">
+      Сьогодні: <span id="current-date"></span>
+    </span>
+  </p>
 
-  <footer>
-    <p>&copy; 2025 YourHealth+</p>
-  </footer>
+  <nav aria-label="Нижня навігація">
+    <a href="about.html">Про проєкт</a> |
+    <a href="contacts.html">Контакти</a>
+  </nav>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
