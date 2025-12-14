@@ -4,145 +4,276 @@
   <meta charset="UTF-8">
   <title>YourHealth+ – Головна</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- потім тут підключиш стилі -->
+
+  <!-- Шрифти -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cuprum:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Стилі -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
+<body class="page page-home">
+
+<!-- Чексбокс для бургера -->
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+<div class="page-layout">
+
+  <!-- Хедер -->
+  <header class="site-header">
     <div class="topbar">
+
+      <label for="nav-toggle" class="burger" aria-label="Відкрити або закрити меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
       <div class="logo">
         <a href="index.html" title="Повернутись на головну">
-          <img src="images/icon.png" alt="Логотип YourHealth+" class="site-logo">
-          <span class="site-name">Your Health+</span>
+          <span class="site-name">YourHealth+</span>
         </a>
       </div>
-
+      <!-- Мови -->
       <div class="lang-switch">
-        <a href="#">UA</a> | <a href="#">EN</a>
+        <a href="#" class="lang-link lang-link--active" data-lang="ua">UA</a> |
+        <a href="#" class="lang-link" data-lang="en">EN</a>
       </div>
-      <form action="#" method="get">
-        <label for="search">Знайди те, що тобі потрібно</label>
-        <input type="search" id="search" name="q" placeholder="Пошук">
-        <button type="submit">Пошук</button>
+      <button type="button" class="btn btn-outline" id="theme-toggle">
+          Змінити тему
+      </button>
+
+
+      <form action="#" method="get" class="search-form" role="search">
+        <label for="search-index" class="visually-hidden">Пошук по сайту</label>
+        <input type="search" id="search-index" name="q" placeholder="Пошук">
+        <button type="submit" class="btn btn-primary">Пошук</button>
       </form>
     </div>
   </header>
 
-  <!-- бокове меню -->
-  <aside>
+  <!-- Сайдбар -->
+  <aside class="sidebar">
+    <label for="nav-toggle" class="sidebar-close" aria-label="Закрити меню">&times;</label>
+
+    <div class="profile-box">
+      <div class="sidebar-avatar-wrapper">
+        <img src="images/example_of_avatar.png" alt="Ваш аватар" class="sidebar-avatar">
+      </div>
+      <p class="profile-name">Ваш профіль</p>
+    </div>
+
     <nav aria-label="Бічна навігація">
-      <ul>
-        <li><a href="profile.html">Профіль</a></li>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="diets.html">Дієти</a></li>
-        <li><a href="recipes.html">Рецепти</a></li>
-        <li><a href="communities.html">Спільноти</a></li>
-        <li><a href="about.html">Про платформу</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
+      <ul class="sidebar-nav">
+        <li><a class="sidebar-btn" href="profile.html">Профіль</a></li>
+        <li><a class="sidebar-btn sidebar-btn--active" href="index.html">Головна</a></li>
+        <li><a class="sidebar-btn" href="diets.html">Дієти</a></li>
+        <li><a class="sidebar-btn" href="recipes.html">Рецепти</a></li>
+        <li><a class="sidebar-btn" href="communities.html">Спільноти</a></li>
+        <li><a class="sidebar-btn" href="about.html">Про платформу</a></li>
+        <li><a class="sidebar-btn" href="contacts.html">Контакти</a></li>
       </ul>
     </nav>
   </aside>
 
-  <main>
-    <!-- хедер головної -->
-    <section aria-labelledby="hero-title">
-      <h2 id="hero-title">Обирай дієти та харчові плани</h2>
-      <p>Здорове харчування доступне кожному.</p>
-      <p><a href="diets.html">Переглянути каталог дієт</a></p>
-    </section>
+  <label for="nav-toggle" class="sidebar-overlay"></label>
 
-    <!-- ДІЄТИ: каркас під дані -->
-    <section aria-labelledby="diets-section-title">
+  <main class="site-main">
+
+    <section aria-labelledby="hero-title" class="hero-section">
+  <h2 id="hero-title">
+    <span class="info-hover"
+          data-tooltip="Використовуй фільтри, щоб знайти саме те, що потрібно тобі">
+      Обирай дієти та харчові план
+    </span>
+  </h2>
+  <p>
+    Здорове харчування доступне кожному.
+
+    </span>
+  </p>
+</section>
+
+    <!-- Дієти -->
+    <section aria-labelledby="diets-section-title" class="home-section">
       <div class="section-head">
-        <h2 id="diets-section-title">Дієти</h2>
-        <button type="button">Фільтри</button>
+        <div class="section-title-block">
+          <a href="diets.html" class="section-title-link" id="diets-section-title">Дієти</a>
+        </div>
+        <button type="button" class="btn btn-outline">Фільтри</button>
       </div>
 
-      <div class="diet-cards" id="diet-cards">
-        <!-- 1 -->
-        <article class="diet-card" data-diet-id="1">
-          <img src="images/example_of_picture.png" alt="Прикладове зображення дієти" title="Тимчасове зображення (плейсхолдер)" width="200" height="140">
-          <h3 class="diet-name">Назва дієти</h3>
+      <div class="cards-row">
+        <article class="card">
+          <a href="diets.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва дієти 1</h3>
+          </a>
         </article>
 
-        <!-- 2 -->
-        <article class="diet-card" data-diet-id="2">
-          <img src="images/example_of_picture.png" alt="Прикладове зображення дієти" title="Тимчасове зображення (плейсхолдер)" width="200" height="140">
-          <h3 class="diet-name">Назва дієти</h3>
+        <article class="card">
+          <a href="diets.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва дієти 2</h3>
+          </a>
         </article>
 
-        <!-- 3 -->
-        <article class="diet-card" data-diet-id="3">
-          <img src="images/example_of_picture.png" alt="Прикладове зображення дієти" title="Тимчасове зображення (плейсхолдер)" width="200" height="140">
-          <h3 class="diet-name">Назва дієти</h3>
+        <article class="card">
+          <a href="diets.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва дієти 3</h3>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="diets.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва дієти 4</h3>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="diets.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва дієти 5</h3>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="diets.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва дієти 6</h3>
+          </a>
         </article>
       </div>
-
-      <p><a href="diets.html">Перейти до всіх дієт</a></p>
     </section>
 
-    <!-- СПІЛЬНОТИ: каркас під дані -->
-    <section aria-labelledby="communities-title">
+    <!-- Спільноти -->
+    <section aria-labelledby="communities-title" class="home-section">
       <div class="section-head">
-        <h2 id="communities-title">Спільноти</h2>
-        <button type="button">Фільтри</button>
+        <div class="section-title-block">
+          <a href="communities.html" class="section-title-link" id="communities-title">Спільноти</a>
+        </div>
+        <button type="button" class="btn btn-outline">Фільтри</button>
       </div>
 
-      <div class="community-cards" id="community-cards">
-        <article class="community-card" data-community-id="1">
-          <img src="images/example_of_picture.png" alt="Прикладове зображення спільноти" title="Тимчасове зображення (плейсхолдер)" width="200" height="140">
-          <h3 class="community-name">Назва спільноти</h3>
+      <div class="cards-row">
+        <article class="card">
+          <a href="communities.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва спільноти 1</h3>
+          </a>
         </article>
 
-        <article class="community-card" data-community-id="2">
-          <img src="images/example_of_picture.png" alt="Прикладове зображення спільноти" title="Тимчасове зображення (плейсхолдер)" width="200" height="140">
-          <h3 class="community-name">Назва спільноти</h3>
+        <article class="card">
+          <a href="communities.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва спільноти 2</h3>
+          </a>
         </article>
 
-        <article class="community-card" data-community-id="3">
-          <img src="images/example_of_picture.png" alt="Прикладове зображення спільноти" title="Тимчасове зображення (плейсхолдер)" width="200" height="140">
-          <h3 class="community-name">Назва спільноти</h3>
+        <article class="card">
+          <a href="communities.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва спільноти 3</h3>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="communities.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва спільноти 4</h3>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="communities.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва спільноти 5</h3>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="communities.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва спільноти 6</h3>
+          </a>
         </article>
       </div>
-
-      <p><a href="communities.html">Перейти до всіх спільнот</a></p>
     </section>
 
-    <!-- РЕЦЕПТИ: каркас під дані -->
-    <section aria-labelledby="recipes-title">
+    <!-- Рецепти -->
+    <section aria-labelledby="recipes-title" class="home-section">
       <div class="section-head">
-        <h2 id="recipes-title">Рецепти</h2>
-        <button type="button">Фільтри</button>
+        <div class="section-title-block">
+          <a href="recipes.html" class="section-title-link" id="recipes-title">Рецепти</a>
+        </div>
+        <button type="button" class="btn btn-outline">Фільтри</button>
       </div>
 
-      <p>Смачні та безпечні рецепти для різних дієт.</p>
-
-      <div class="recipe-cards" id="recipe-cards">
-        <article class="recipe-card" data-recipe-id="1">
-          <img src="images/example_of_picture.png" alt="Прикладове зображення рецепта" title="Тимчасове зображення (плейсхолдер)" width="200" height="140">
-          <h3 class="recipe-name">Назва рецепта</h3>
+      <div class="cards-row">
+        <article class="card">
+          <a href="recipes.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва рецепта 1</h3>
+          </a>
         </article>
 
-        <article class="recipe-card" data-recipe-id="2">
-          <img src="images/example_of_picture.png" alt="Прикладове зображення рецепта" title="Тимчасове зображення (плейсхолдер)" width="200" height="140">
-          <h3 class="recipe-name">Назва рецепта</h3>
+        <article class="card">
+          <a href="recipes.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва рецепта 2</h3>
+          </a>
         </article>
 
-        <article class="recipe-card" data-recipe-id="3">
-          <img src="images/example_of_picture.png" alt="Прикладове зображення рецепта" title="Тимчасове зображення (плейсхолдер)" width="200" height="140">
-          <h3 class="recipe-name">Назва рецепта</h3>
+        <article class="card">
+          <a href="recipes.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва рецепта 3</h3>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="recipes.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва рецепта 4</h3>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="recipes.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва рецепта 5</h3>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="recipes.html" class="card-link">
+            <img src="images/example_of_picture.png" class="card-image" alt="">
+            <h3 class="card-title">Назва рецепта 6</h3>
+          </a>
         </article>
       </div>
-
-      <p><a href="recipes.html">Перейти до всіх рецептів</a></p>
     </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2025 YourHealth+. Всі права захищено.</p>
-    <nav aria-label="Нижня навігація">
-      <a href="about.html">Про проєкт</a> |
-      <a href="contacts.html">Контакти</a>
-    </nav>
-  </footer>
+  <!-- Футер -->
+<footer class="site-footer">
+  <p>
+    &copy; <span id="current-year"></span> YourHealth+. Всі права захищено.
+    <span style="margin-left:10px; opacity:.85;">
+      Сьогодні: <span id="current-date"></span>
+    </span>
+  </p>
+
+  <nav aria-label="Нижня навігація">
+    <a href="about.html">Про проєкт</a> |
+    <a href="contacts.html">Контакти</a>
+  </nav>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
